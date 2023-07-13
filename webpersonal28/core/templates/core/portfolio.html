@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link href="{% static 'core/CSS/estilos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/CSS/slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/CSS/all.min.css' %}">
+    <link rel="functions" href="{% static 'core/JS/funciones.js' %}">
+    <!-- <script src="https://kit.fontawesome.com/615af6ddaa.js" crossorigin="anonymous"></script> -->
+    <link rel="icon" type="image/x-icon" href="{% static 'core/imagenes/criolla.ico' %}">
+    <!-- datos de Open Graph -->
+    <meta property="og:title" content="CLASES DE MÚSICA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clasesdemusica.netlify.app/" />
+    <meta property="og:image"
+        content="https://strummingbars.com/wp-content/uploads/2022/11/learn-guitar-chords-fingering.jpg" />
+    <meta property="og:description"
+        content="A tu propio ritmo, aprendé desde cero o perfeccioná lo que ya sabés. Nunca es tarde cuando la pasión es grande..." />
+    <title>{% block title %}{% endblock %}Galería</title>
+</head>
+
+<body>
+    <header class="capa-blur">
+        <div class="contenedor">
+            <h1 class="titulo">Galería</h1>
+            <input type="checkbox" id="checkbox" />
+            <img id="hamburguesa" class="icon" src="{% static 'core/imagenes/hamb-menu.svg' %}" alt="menu hamburguesa" />
+            <img id="equis" class="icon" src="{% static 'core/imagenes/x-icono.svg' %}" alt="icono equis cerrar menu" />
+            <nav class="menu">
+                <a href="{% url 'about' %}">Acerca de mí</a>
+                <div class="separador"></div>
+                <a href="{% url 'service' %}">Servicios</a>
+                <div class="separador"></div>
+                <a href="{% url 'portfolio' %}">Galería</a>
+                <div class="separador"></div>
+                <a href="{% url 'contacto' %}">Contacto</a>
+                <div class="separador"></div>
+                <a href="{% url 'home' %}">Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido -->
+    {% block content %}
+    <main>
+        <section class="guitarra">
+            <div id="presentacion">
+                <h2>Guitarra clásica, eléctrica y bajo</h2>
+                <h3>Profesor Federico Tasso</h3>
+                <p>
+                    Egresado del Conservatorio J. J. Castro. <br />Más de 15 años de
+                    experiencia dando clases de música y guitarra
+                </p>
+            </div>
+        </section>
+
+        <div class="icono-wapp">
+            <img id="wapp" src="{% static 'core/imagenes/Whatsapp.png' %}" alt="icono whatsapp" title="Enviame un whatsapp" type="submit"
+                onclick="wapp()" target="_blank" />
+        </div>
+        <script src="{% static 'core/JS/funciones.js' %}"></script>
+        <section>
+            <div class="modalidad">
+                <h2>GALERÍA MULTIMEDIA</h2>
+                <h3>Videos</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/embed/I_RuYsHjVBs" target="yt"><i class="fa-brands fa-youtube"
+                                fa- style="color: #ff0000"></i>
+                            Nieblas del Riachuelo</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/embed/eylLr55RQbk" target="yt"><i class="fa-brands fa-youtube"
+                                fa- style="color: #ff0000"></i>
+                            Preludio suite 3 de Bach</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/embed/4L9OKVVks1w" target="yt"><i class="fa-brands fa-youtube"
+                                fa- style="color: #ff0000"></i>
+                            Concierto de graduación</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/embed/dLT4VUJXr54" target="yt"><i class="fa-brands fa-youtube"
+                                fa- style="color: #ff0000"></i>
+                            Clases de Guitarra
+                        </a>
+                    </li>
+                </ul>
+                <div class="caja-yt">
+                    <iframe src="https://www.youtube.com/embed/I_RuYsHjVBs" frameborder="1" name="yt" width="560px"
+                        height="315px"></iframe>
+                </div>
+
+                <br />
+                <br />
+                <h3>Imágenes</h3>
+                <br />
+                <p>Lugar de estudio y mi actividad profesional</p>
+                <div class="contenedor-slider">
+                    <span id="orden-1"></span>
+                    <span id="orden-2"></span>
+                    <span id="orden-3"></span>
+                    <span id="orden-4"></span>
+                    <span id="orden-5"></span>
+                    <span id="orden-6"></span>
+                    <span id="orden-7"></span>
+                    <span id="orden-8"></span>
+                    <span id="orden-9"></span>
+                    <span id="orden-10"></span>
+                    <div class="img-slider img-1">
+                        <a href="#orden-10" id="btn-prev">&#60;</a>
+                        <a href="#orden-2" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Espacio de estudio</p>
+                        </div>
+                    </div>
+                    
+                    <div class="img-slider img-2">
+                        <a href="#orden-1" id="btn-prev">&#60;</a>
+                        <a href="#orden-3" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Espacio de estudio</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-3">
+                        <a href="#orden-2" id="btn-prev">&#60;</a>
+                        <a href="#orden-4" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Patricio da Rocha y sus guitarras criollas</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-4">
+                        <a href="#orden-3" id="btn-prev">&#60;</a>
+                        <a href="#orden-5" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Dúo Crespo - Tasso</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-5">
+                        <a href="#orden-4" id="btn-prev">&#60;</a>
+                        <a href="#orden-6" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Concierto del curso Tango para Músicos</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-6">
+                        <a href="#orden-5" id="btn-prev">&#60;</a>
+                        <a href="#orden-7" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Dúo Eugenia Giro - Federico Tasso</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-7">
+                        <a href="#orden-6" id="btn-prev">&#60;</a>
+                        <a href="#orden-8" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Coro MVP</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-8">
+                        <a href="#orden-7" id="btn-prev">&#60;</a>
+                        <a href="#orden-9" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>El Rechazo</p>
+                        </div>
+                    </div>
+
+                    <div class="img-slider img-9">
+                        <a href="#orden-3" id="btn-prev">&#60;</a>
+                        <a href="#orden-10" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Vocal Vox Animae</p>
+                        </div>
+                    </div>
+                    
+                    <div class="img-slider img-10">
+                        <a href="#orden-9" id="btn-prev">&#60;</a>
+                        <a href="#orden-1" id="btn-next">&#62;</a>
+                        <div class="texto-img">
+                            <p>Vocal Vox Animae</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <div class="sociales">
+                <a href="https://www.facebook.com/Clases.de.Guitarra.Federico.Tasso" class="social-icon"
+                    target="_blank"><img src="{% static 'core/imagenes/icons8-facebook-100.svg' %}" alt="Facebook link" /></a>
+                <a href="https://www.instagram.com/fede_tasso_musico/?hl=es-la" class="social-icon" target="_blank"><img src="{% static 'core/imagenes/icons8-instagram-100.svg' %}" alt="Instagram link" /></a>
+                <a href="https://www.youtube.com/channel/UC6DS8iNUoIh2CKsO7YGDR2A?view_as=subscriber"
+                    class="social-icon" target="_blank"><img src="{% static 'core/imagenes/youtube-122.svg' %}" alt="Twitter link" /></a>
+            </div>
+            <p class="copy">Federico Tasso &copy; 2023</p>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+
+</html>

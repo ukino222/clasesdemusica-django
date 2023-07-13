@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'core/CSS/estilos.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'core/imagenes/criolla.ico' %}">
+    <!-- datos de Open Graph -->
+    <meta property="og:title" content="CLASES DE MÚSICA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clasesdemusica.netlify.app/" />
+    <meta property="og:image" content="https://strummingbars.com/wp-content/uploads/2022/11/learn-guitar-chords-fingering.jpg" />
+    <meta property="og:description" content="A tu propio ritmo, aprendé desde cero o perfeccioná lo que ya sabés. Nunca es tarde cuando la pasión es grande..." />
+    <title>{% block title %}{% endblock %}Acerca de mí</title>
+</head>
+
+<body>
+    <header class="capa-blur">  
+        <div class="contenedor">
+            <h1 class="titulo">Acerca de mí</h1> 
+            <input type="checkbox" id="checkbox">
+            <img id="hamburguesa" class="icon" src="{% static 'core/imagenes/hamb-menu.svg' %}" alt="menu hamburguesa">
+            <img id="equis" class="icon" src="{% static 'core/imagenes/x-icono.svg' %}" alt="icono equis cerrar menu">
+            <nav class="menu">
+                <a href="{% url 'about' %}">Acerca de mí</a>
+                <div class="separador"></div>
+                <a href="{% url 'service' %}">Servicios</a>
+                <div class="separador"></div>
+                <a href="{% url 'portfolio' %}">Galería</a>
+                <div class="separador"></div>
+                <a href="{% url 'contacto' %}">Contacto</a>
+                <div class="separador"></div>
+                <a href="{% url 'home' %}">Inicio</a>
+            </nav>
+        </div>
+    </header>
+<!-- Contenido -->
+{% block content %}
+    <main>
+        <section class="guitarra">
+            <div id="presentacion">
+                <h2>Guitarra clásica, eléctrica y bajo</h2>
+                <h3>Profesor Federico Tasso</h3>
+                <p>Egresado del Conservatorio J. J. Castro.
+                    <br>Más de 15 años de experiencia dando clases de música y guitarra</p>
+                </div>
+            </section>
+            
+            <div class="icono-wapp">
+               <img id="wapp" src="{% static 'core/imagenes/Whatsapp.png' %}" alt="icono whatsapp" title="Enviame un whatsapp"  type="submit" onclick="wapp()" target="_blank">
+            </div>
+            <script src="{% static 'core/JS/funciones.js' %}"></script>  
+        <section>
+            <div class="modalidad">
+            <h2>BIOGRAFÍA</h2>
+            <article>
+                <div class="contenedor-bio">
+                    <div>
+                        <img src="{% static 'core/imagenes/federico-tasso.webp' %}" alt="Federico Tasso">
+                    </div>
+                <p>Mi nombre es Federico Tasso. Soy guitarrista y arreglador argentino, nacido en Neuquén, en el año 1982.</p>
+                <br>
+                <p>Comencé mis estudios musicales a los 16 años en la Escuela de Música de Neuquén. Estudié guitarra con Marta Schumann-Vilo y al mismo tiempo comencé a estudiar contrabajo. Formé parte de la orquesta de alumnos y profesores de la Escuela. Realicé diversos cursos de armonía y morfología en la Universidad Nacional del Comahue con el profesor Marcelo Chevallier.</p>
+                <br>
+                <p>En el año 2004, me gradué de Maestro Elemental de Música con Orientación Guitarra.</p>
+                <br>
+                <p>En 2005, continué mis estudios en Buenos Aires en el Conservatorio Juan José Castro con Marcela Sfriso. Allí obtuve el título de Profesor Superior de Música con Orientación Guitarra.</p>
+                <br>
+                <p>Como guitarrista, me desempeñé en diversos grupos: La Cofradía del Noble Hexacordio (música clásica), Dectorgio (rock & blues), Dúo Tasso-Aznar (guitarra y flauta -repertorio académico), Patricio Da Rocha y la Guitarras Criollas (Tango) y La Secretaria de Obispo (Rock), entre otros.</p>
+                <br>
+                <p>Me presenté como guitarrista solista interpretando obras de repertorio clásico-académico en numerosas salas e iglesias de Buenos Aires y Neuquén. Como guitarrista acompañante, trabajé junto al Ensamble Vocal MVP (Música Popular).</p>
+                <br>
+                <p>En el año 2016, participé del Encuentro Tango para Músicos, dando un concierto junto a varios músicos renombrados en el Centro Cultural Haroldo Conti (ex ESMA).</p>
+                <br>
+                <p>Actualmente, me desempeño como docente de música en colegios y de manera particular en Buenos Aires. Asimismo, me dedico a hacer arreglos musicales y acompañar cantantes de tango y folclore. Soy también coreuta en el Vocal Vox Animae. Continúo mi carrera como guitarrista en El Rechazo Tango (trío de guitarras y canto), Mariano Balzano y las Guitarras de al Lao (Dúo de guitarras y canto) y en el Dúo Tasso-Palacios (guitarra y piano -tango).</p>
+                </div>
+            </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <div class="sociales">
+                <a href="https://www.facebook.com/Clases.de.Guitarra.Federico.Tasso" class="social-icon" target="_blank"><img src="{% static 'core/imagenes/icons8-facebook-100.svg' %}" alt="Facebook link"></a>
+                <a href="https://www.instagram.com/fede_tasso_musico/?hl=es-la" class="social-icon" target="_blank"><img src="{% static 'core/imagenes/icons8-instagram-100.svg' %}" alt="Instagram link"></a>
+                <a href="https://www.youtube.com/channel/UC6DS8iNUoIh2CKsO7YGDR2A?view_as=subscriber" class="social-icon" target="_blank"><img src="{% static 'core/imagenes/youtube-122.svg' %}" alt="Twitter link"></a>
+            </div>
+            <p class="copy">Federico Tasso &copy; 2023</p>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>
+
